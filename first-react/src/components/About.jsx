@@ -19,7 +19,7 @@ export default function About() {
         if (mystyle.color === 'white') {
             setMyStyle(
                 {
-                    color: 'black',
+                    color: 'white',
                     backgroundColor: 'white',
                 }
 
@@ -32,7 +32,7 @@ export default function About() {
             console.log("Already Changed the state")
             setMyStyle(
                 {
-                    color: 'white',
+                    color: 'black',
                     backgroundColor: 'black',
                     border: '2px solid red  '
                 }
