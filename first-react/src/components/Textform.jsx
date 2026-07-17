@@ -6,7 +6,9 @@ export default function Textform(props) {
   const [isSpeaking, setIsSpeaking] = useState(false);
 
   const HandleUpClick = () => {
-
+   if(text.length===0)
+     return props.showAlert(" There is no text to convert ", "Warning");
+    
     let newtext = text.toUpperCase();
     setText(newtext);
     props.showAlert("Successfully converted to upper case", "success");
@@ -60,7 +62,8 @@ export default function Textform(props) {
 
 
   const HandleLowClick = () => {
-
+  if(text.length===0)
+    return props.showAlert(" There is no text to convert ", "Warning");
     let newtext = text.toLowerCase();
     setText(newtext);
     props.setAlert("Successfully converted to lower case", "success");

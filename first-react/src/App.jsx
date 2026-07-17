@@ -4,11 +4,16 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import Navbar from './components/Navbar';
+// import About from './components/About';
 import Textform from './components/Textform';
 import Alert from './components/Alert';
 
 
-
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route
+// } from "react-router-dom";
 // export default function App() {
 //   return (
 //     <div>
@@ -17,7 +22,7 @@ import Alert from './components/Alert';
 //   )
 // }
 
-// import About from './components/About'
+
 function App() {
   const [mode, setMode] = useState('light')
   const [mode2, setMode2] = useState('light')
@@ -44,7 +49,7 @@ function App() {
     else {
       setMode('light');
       document.body.style.backgroundColor = 'white';
-      document.body.style.color = 'balck';
+      document.body.style.color = 'black';
       showAlert("Dark mode has successfully disabled", "success");
 
     }
@@ -56,16 +61,24 @@ function App() {
 
   return (
     <>
-      <Navbar mode={mode} toggleMode={toggleMode} title="Text-Utilities" />
+      {/* <Router> */}
+        <Navbar mode={mode} toggleMode={toggleMode} title="Text-Utilities" aboutText="About" />
 
+        {/* <Alert alert={alert} /> */}
 
-      <Alert alert={alert} />
-      <center><div className="container my-3">
-        <Textform heading="Enter your text to analyze" mode={mode} showAlert={showAlert} />
-        {/* <About/> */}
+        <center><div className="container my-3">
+        {/* <Routes>
+  <Route path="/About" element={<About />} />
+  <Route 
+   exact path="/" 
+    element={<Textform heading="Enter your text to analyze" mode={mode} showAlert={showAlert} />} 
+  />
+</Routes> */}
 
-      </div></center>
+          {/* <About/> */}
 
+        </div></center>
+      {/*  </Router> */}
     </>
   )
 }
