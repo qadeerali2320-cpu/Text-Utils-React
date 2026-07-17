@@ -64,14 +64,16 @@ function App() {
       {/* <Router> */}
         <Navbar mode={mode} toggleMode={toggleMode} title="Text-Utilities" aboutText="About" />
 
-        {/* <Alert alert={alert} /> */}
+        <Alert alert={alert} />
 
         <center><div className="container my-3">
+          <Textform heading="Enter your text to analyze" mode={mode} showAlert={showAlert} />
         {/* <Routes>
   <Route path="/About" element={<About />} />
   <Route 
    exact path="/" 
     element={<Textform heading="Enter your text to analyze" mode={mode} showAlert={showAlert} />} 
+
   />
 </Routes> */}
 
